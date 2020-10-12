@@ -9,7 +9,7 @@ if a<b and a<c:
 elif b<a and b<c:
     if a<c: print(f"b {b}, a {a}, c {c}")
     else: print (f"b {b}, c {c}, a {a}")
-elif c<a and c<b:
+else c<a and c<b:
     if a<b: print(f"c {c}, a {a}, b {b}")
     else: print (f"c {c}, b {b}, a {a}")
 
