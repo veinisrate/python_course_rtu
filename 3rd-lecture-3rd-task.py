@@ -12,7 +12,8 @@ elif b<a and b<c:
 elif c<a and c<b:
     if a<b: print(f"c {c}, a {a}, b {b}")
     else: print (f"c {c}, b {b}, a {a}")
-    
+
+#other option (easier)
 sort_list = [a, b, c]
 print(sort_list)
 sort_list.sort()
