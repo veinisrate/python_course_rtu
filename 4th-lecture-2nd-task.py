@@ -10,5 +10,4 @@ for line in range(height):
 print('-'*int(2*height+1))
 # Python like tree
 for line in range(height):
-    print(" " * (height-line), end="")
-    print("*" * int(2*line+1))
+    print(" " * (height-line-1), "*" * int(2*line+1))
