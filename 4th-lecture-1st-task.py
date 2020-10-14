@@ -1,6 +1,6 @@
 num = 1
 end = 100
-while num < end:
+while num <= end:
     if num%5==0 and num%7==0:
         print("FizzBuzz", end=",")
     elif num%5==0:
