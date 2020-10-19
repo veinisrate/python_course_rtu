@@ -8,16 +8,19 @@ def replace(user_input, findValue, stopValue):
     return user_input
 
 user_input = str(input("Please, enter phrase: "))
-print(user_input)
+# print(user_input)
 sub_str = "slikts"
+power = "nav"
 
-if sub_str in user_input and user_input.find("nav")==-1:
+if sub_str in user_input and (user_input.find(power)==-1 or user_input.find(power)>user_input.find(sub_str)):
     adapted_input = user_input.replace(sub_str, "labs")
     print (user_input, "->", adapted_input)
-elif sub_str in user_input and user_input.find("nav")< user_input.find(sub_str):
+elif sub_str in user_input and user_input.find(power)< user_input.find(sub_str):
     adapted_input = user_input.replace(sub_str, "labs")
-    adapted_input = replace(adapted_input,"nav", "labs")
+    adapted_input = replace(adapted_input,power, "labs")
     print (user_input, "->", adapted_input)
+else:
+    print(user_input + "->" + user_input)
 
 
 # Uzrakstīt programmu teksta pārveidošanai
