@@ -4,7 +4,7 @@ def replace(user_input, findValue, stopValue):
     if findValue in user_input:
         nav_start = user_input.find(findValue)
         nav_end = user_input.find(stopValue)
-        user_input = user_input.replace(user_input[nav_start:nav_end], "")
+        user_input = user_input.replace(user_input[nav_start:nav_end], "ir ")
     return user_input
 
 user_input = str(input("Please, enter phrase: "))
