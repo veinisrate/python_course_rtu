@@ -18,7 +18,7 @@ string_to_solve = player_one_input
 
 print(player_one_input)
 print(mine_field)
-print(string_to_solve)
+print(string_to_solve) # in case of regex it's redundant, was necessary for ascii compare though leaving in for test purposes
 
 solved = False
 while(solved==False):
