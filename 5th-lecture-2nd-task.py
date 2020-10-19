@@ -1,6 +1,6 @@
 from helper import inputCharacter
 import re
-player_one_input = str(input('Player one= Enter text: '))
+player_one_input = str(input('Player one, please, enter text: '))
 mine_field = ""
 string_to_solve = ""
 
