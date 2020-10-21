@@ -7,9 +7,7 @@ while number!='q':
         input_count=input_count+1
         total+=float(number)
         average = total/input_count
-        print(f"{number=} {total=} {average=}")
-
-
+        print(f"{average=}")
 # 1.a Vidējā vērtība
 # Uzrakstīt programmu, kas liek lietotājam ievadīt skaitļus(float).
 # Programma pēc katra ievada rāda visu ievadīto skaitļu vidējo vērtību.
