@@ -6,8 +6,7 @@
 # Piemērs add_mult(2,5,4) -> atgriezīs (2+4)*5 = 30
 
 def add_mult(x, y, z) -> float:
-    mult_list = [x, y, z]
-    mult_list.sort()
+    mult_list = sorted([x, y, z])
     x, y, z = mult_list
     return (x+y)*z
 
