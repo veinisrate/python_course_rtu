@@ -18,11 +18,10 @@
 
 def get_city_year(p0, perc, delta, p) -> int:
     year = 0
-    intialPopulation = p0
+    if p0 + (p0 * perc/100) + delta <= p0:
+        return -1
     while (p0<=p):
         p0 = (p0 + (p0 * perc/100)) + delta
-        if p0<=intialPopulation:
-            return -1
         year += 1 
     return year
 
