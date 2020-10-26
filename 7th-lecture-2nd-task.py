@@ -12,8 +12,7 @@ def is_palindrome(text:str) -> bool:
     for word in text_list:
         reverseSentence_list.append("".join(word[::-1]))
 
-    if textNoExtraSpaces == " ".join(reverseSentence_list): return True
-    else: return False
+    return textNoExtraSpaces == " ".join(reverseSentence_list)
 
 
 #tests
