@@ -16,7 +16,7 @@ def clean_dict_value(d: dict, bad_val:any) -> dict:
         if d[k]==bad_val:
             key_list.append(k)
     for k in key_list:
-        d.pop(k)
+        del d[k]
     return d
 
 print(clean_dict_value({'a':5,'b':6,'c':5}, 5))
@@ -31,3 +31,23 @@ def clean_dict_values(d: dict, v_list: list) -> dict:
     return d
 
 print(clean_dict_values({'a':5,'b':6,'c':5}, [3,4,5]))
+
+#---- OR
+
+def clean_dict_valueOR(d: dict, bad_val:any) -> dict:
+    temp_dict = d.copy()
+    for k in temp_dict:
+        if d[k]==bad_val:
+            del d[k]
+    return d
+
+print(clean_dict_valueOR({'a':5,'b':6,'c':5}, 5))
+
+def clean_dict_valuesOR(d: dict, v_list: list) -> dict:
+    temp_dict = d.copy()
+    for k in temp_dict:
+        if d[k] in v_list:
+            d.pop(k)
+    return d
+
+print(clean_dict_valuesOR({'a':5,'b':6,'c':5}, [3,4,5]))
