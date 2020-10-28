@@ -18,7 +18,7 @@ def get_char_count(text:str) -> dict:
 print(get_char_count("hubba bubba"))
 
 #1.b
-def get_digit_dict(num:int):
+def get_digit_dict(num:int) -> dict:
     num_text = str("".join(sorted(list(str(num)))))
     out_dict = {k:0 for k in num_text}
     print(num_text)
