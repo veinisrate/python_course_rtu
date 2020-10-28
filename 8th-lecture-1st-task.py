@@ -13,8 +13,10 @@ def get_char_count(text:str) -> dict:
     out_dict = {k:0 for k in text}
     for char in text:
         out_dict[char] = text.count(char)
-    print(out_dict)
+    return out_dict
 
 print(get_char_count("hubba bubba"))
 
 #1.b
+def get_digit_dict(num):
+    print("yo")
