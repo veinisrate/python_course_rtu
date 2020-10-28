@@ -4,7 +4,9 @@
 # clean_dict_value({'a':5,'b':6,'c':5}, 5, 10) -> {'a':10,'b':6,'c':10} , jo 5 bija vērtība, kas jānomaina.
 
 def replace_dict_value(d: dict, bad_val:any, good_val:any) -> dict:
-    out_dict = {}
-    return out_dict
+    for k in d:
+        if d[k] == bad_val: 
+            d[k]=good_val
+    return d
 
-    
+print(replace_dict_value({'a':5,'b':6,'c':5}, 5, 10))
