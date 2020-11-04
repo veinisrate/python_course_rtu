@@ -37,9 +37,9 @@ class Song:
         print(f"New song made: {self.title} by {self.author}: \n{self.lyrics}")
 
     def sing(self, max_lines=-1):
-        if self.title is not "":
+        if self.title != "":
             print(f"Song name: {self.title}")
-        if self.author is not "":
+        if self.author != "":
             print(f"Author: {self.author}")
         print("----")
         for num, line in enumerate(self.lyrics, 1):
@@ -51,9 +51,9 @@ class Song:
         return self
 
     def yell(self, max_lines=-1):
-        if self.title is not "":
+        if self.title != "":
             print(f"Song name: {self.title}")
-        if self.author is not "":
+        if self.author != "":
             print(f"Author: {self.author}")
         print("----")
         for num, line in enumerate(self.lyrics, 1):
@@ -79,9 +79,9 @@ class Rap(Song):
         super().__init__(title, author, lyrics)
     
     def break_it(self, max_lines=-1, drop="YAH"):
-        if self.title is not "":
+        if self.title != "":
             print(f"Song name: {self.title}")
-        if self.author is not "":
+        if self.author != "":
             print(f"Author: {self.author}")
         print("----")
         for num, line in enumerate(self.lyrics, 1):
@@ -98,4 +98,4 @@ class Rap(Song):
 my_rap = Rap("My heart will go on", "Celine Dion",
               ("You my heart", "You my soul", "Why so long"))
 
-my_rap.break_it()
+my_rap.break_it(1)
