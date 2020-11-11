@@ -59,7 +59,11 @@ def save_lines(destpath, lines):
 
 #1e
 def clean_punctuation(srcPath, destPath):
-    pass
+    with open(srcPath, encoding='utf-8') as readFile, open(destPath, mode='w', encoding='utf-8') as writeFile:
+        fileContent = readFile.read()
+        for symbol in string.punctuation:
+            fileContent = fileContent.replace(symbol, "")
+        writeFile.write(fileContent)
     
 
 url = 'https://raw.githubusercontent.com/ValRCS/Python_RTU_08_20/master/data/veidenbaums.txt'
@@ -74,3 +78,5 @@ print(get_poem_lines(fileName))
 
 #1d
 save_lines('./veidenbaums2.txt', get_poem_lines(fileName))
+
+clean_punctuation(fileName, "Veidenbaums_no_punkts.txt")
